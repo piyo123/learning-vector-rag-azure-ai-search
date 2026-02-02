@@ -1,0 +1,138 @@
+{
+    "@odata.context": "https://kazuma-azure-ai-search.search.windows.net/$metadata#indexes/$entity",
+    "@odata.etag": "\"0x8DE61588E57F4C8\"",
+    "name": "kazuma-rag-index1",
+    "description": null,
+    "defaultScoringProfile": null,
+    "permissionFilterOption": null,
+    "purviewEnabled": false,
+    "fields": [
+        {
+            "name": "id",
+            "type": "Edm.String",
+            "searchable": true,
+            "filterable": true,
+            "retrievable": true,
+            "stored": true,
+            "sortable": true,
+            "facetable": true,
+            "key": true,
+            "indexAnalyzer": null,
+            "searchAnalyzer": null,
+            "analyzer": null,
+            "normalizer": null,
+            "dimensions": null,
+            "vectorSearchProfile": null,
+            "vectorEncoding": null,
+            "permissionFilter": null,
+            "sensitivityLabel": null,
+            "synonymMaps": []
+        },
+        {
+            "name": "content",
+            "type": "Edm.String",
+            "searchable": true,
+            "filterable": true,
+            "retrievable": true,
+            "stored": true,
+            "sortable": true,
+            "facetable": true,
+            "key": false,
+            "indexAnalyzer": null,
+            "searchAnalyzer": null,
+            "analyzer": null,
+            "normalizer": null,
+            "dimensions": null,
+            "vectorSearchProfile": null,
+            "vectorEncoding": null,
+            "permissionFilter": null,
+            "sensitivityLabel": null,
+            "synonymMaps": []
+        },
+        {
+            "name": "contentVector",
+            "type": "Collection(Edm.Single)",
+            "searchable": true,
+            "filterable": false,
+            "retrievable": false,
+            "stored": true,
+            "sortable": false,
+            "facetable": false,
+            "key": false,
+            "indexAnalyzer": null,
+            "searchAnalyzer": null,
+            "analyzer": null,
+            "normalizer": null,
+            "dimensions": 1536,
+            "vectorSearchProfile": "my-vector-profile",
+            "vectorEncoding": null,
+            "permissionFilter": null,
+            "sensitivityLabel": null,
+            "synonymMaps": []
+        }
+    ],
+    "scoringProfiles": [],
+    "corsOptions": null,
+    "suggesters": [],
+    "analyzers": [],
+    "normalizers": [],
+    "tokenizers": [],
+    "tokenFilters": [],
+    "charFilters": [],
+    "encryptionKey": null,
+    "similarity": {
+        "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+        "k1": null,
+        "b": null
+    },
+    "semantic": {
+        "defaultConfiguration": null,
+        "configurations": [
+            {
+                "name": "kazuma-semantic-config1",
+                "flightingOptIn": false,
+                "rankingOrder": "BoostedRerankerScore",
+                "prioritizedFields": {
+                    "titleField": {
+                        "fieldName": "content"
+                    },
+                    "prioritizedContentFields": [
+                        {
+                            "fieldName": "content"
+                        }
+                    ],
+                    "prioritizedKeywordsFields": [
+                        {
+                            "fieldName": "content"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "vectorSearch": {
+        "algorithms": [
+            {
+                "name": "my-hnsw",
+                "kind": "hnsw",
+                "hnswParameters": {
+                    "metric": "cosine",
+                    "m": 4,
+                    "efConstruction": 400,
+                    "efSearch": 500
+                },
+                "exhaustiveKnnParameters": null
+            }
+        ],
+        "profiles": [
+            {
+                "name": "my-vector-profile",
+                "algorithm": "my-hnsw",
+                "vectorizer": null,
+                "compression": null
+            }
+        ],
+        "vectorizers": [],
+        "compressions": []
+    }
+}

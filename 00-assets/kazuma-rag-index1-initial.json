@@ -1,0 +1,42 @@
+{
+    "name": "kazuma-rag-index1",
+    "fields": [
+      {
+        "name": "id",
+        "type": "Edm.String",
+        "key": true
+      },
+      {
+        "name": "content",
+        "type": "Edm.String",
+        "searchable": true
+      },
+      {
+        "name": "contentVector",
+        "type": "Collection(Edm.Single)",
+        "searchable": true,
+        "dimensions": 1536,
+        "vectorSearchProfile": "my-vector-profile"
+      }
+    ],
+    "vectorSearch": {
+      "algorithms": [
+        {
+          "name": "my-hnsw",
+          "kind": "hnsw",
+          "hnswParameters": {
+            "metric": "cosine",
+            "m": 4,
+            "efConstruction": 400
+          }
+        }
+      ],
+      "profiles": [
+        {
+          "name": "my-vector-profile",
+          "algorithm": "my-hnsw"
+        }
+      ]
+    }
+  }
+  
