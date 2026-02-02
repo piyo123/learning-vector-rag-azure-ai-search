@@ -13,7 +13,7 @@
 
 ## 2. Agentic Retrieval (Public Preview as of Feb. 2, 2026)
 
-[Agentic retrieval in Azure AI Search](agentic_retrieval_overview) によると Agentic Retrieval とは次のようなことを指すようです。
+[Agentic retrieval in Azure AI Search][agentic_retrieval_overview] によると Agentic Retrieval とは次のようなことを指すようです。
 
 > - 大規模言語モデル（LLM）を使用して、複雑なクエリをより小さく、焦点を絞ったサブクエリ> に分解し、インデックス化されたコンテンツ全体をより網羅的に検索します。サブクエリに> は、追加の文脈としてチャット履歴を含めることもできます。
 >
@@ -23,7 +23,7 @@
 > 
 > - このレスポンスはモジュール化されていながら包括的で、クエリプランや参照元ドキュメントも含まれます。検索結果のみを> グラウンディングデータとして利用することも、LLM を呼び出して回答文を生成することも選択できます。
 
-本リポジトリでは、[Quickstart: Agentic retrieval](qs_agentic_retrieval) をベースに、Azure Blob Storage に格納した `stories.pdf` (00-assetsにもコピーが入っています) をデータソースとして Agentic Retrieval を学習しました。
+本リポジトリでは、[Quickstart: Agentic retrieval][qs_agentic_retrieval] をベースに、Azure Blob Storage に格納した `stories.pdf` (00-assetsにもコピーが入っています) をデータソースとして Agentic Retrieval を学習しました。
 
 ### 2.1. Concept and Relationships (My understanding)
 ```
@@ -86,15 +86,15 @@ GitHub Copilot も解を見いだせなかったため、Index に Embeddings �
 
 
 ## 3. Refrences
-- [What is Azure AI Search?](what_is_rag_in_azure_ai_search)
-- [Classic RAG pattern for Azure AI Search](what_is_classic_search)
-- [Readme for classic RAG in Azure AI Search](classic_github_repo)
-- [Agentic retrieval in Azure AI Search](agentic_retrieval_overview)
-- [Modern RAG with agentic retrieval](what_is_agentic_retrieval)
-- [Retrieval-augmented Generation (RAG) in Azure AI Search](what_is_rag_in_azure_ai_search)
-- [Azure SDK For Python (Preview) References](azure_sdk_python_pre_reference)
-- [Skills for extra processing during indexing (Azure AI Search)](indexing_skills)
-- [Quickstart: Agentic retrieval](qs_agentic_retrieval)
+- [What is Azure AI Search?][what_is_rag_in_azure_ai_search]
+- [Classic RAG pattern for Azure AI Search][what_is_classic_search]
+- [Readme for classic RAG in Azure AI Search][classic_github_repo]
+- [Agentic retrieval in Azure AI Search][agentic_retrieval_overview]
+- [Modern RAG with agentic retrieval][what_is_agentic_retrieval]
+- [Retrieval-augmented Generation (RAG) in Azure AI Search][what_is_rag_in_azure_ai_search]
+- [Azure SDK For Python (Preview) References][azure_sdk_python_pre_reference]
+- [Skills for extra processing during indexing (Azure AI Search)][indexing_skills]
+- [Quickstart: Agentic retrieval][qs_agentic_retrieval]
 
 
 ## 4. 備忘録
