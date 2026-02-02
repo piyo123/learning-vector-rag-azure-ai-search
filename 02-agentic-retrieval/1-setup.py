@@ -65,7 +65,7 @@ BLOB_CONNECTION_STRING = os.getenv("BLOB_CONNECTION_STRING")
 BLOB_CONTAINER_NAME = os.getenv("BLOB_CONTAINER_NAME")
 BLOB_FOLDER_NAME = os.getenv("BLOB_FOLDER_NAME")
 
-TITLE_SKILL_API_URI = "https://unsilicified-earnest-untheistically.ngrok-free.dev/extractTitle"
+TITLE_SKILL_API_URI = "https://<PUT_YOUR_SKILL_API_SERVER>/extractTitle"
 TITLE_SKILL_API_KEY = None
 
 # Set up credentials (API key-based authentication)
