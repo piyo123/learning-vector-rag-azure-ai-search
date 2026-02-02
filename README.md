@@ -11,7 +11,7 @@
 本例では Index 自体は Azure Portal で作成しました。  
 `01-single-vector-search` および `02-hybrid-search` は `kazuma-rag-index1-initial.json` を、`03-semantic-hybrid-search` は `kazuma-rag-index1-semantic.json` を参照してください。
 
-## 2. Agentic Retrieval (Public Preview as of Fec. 2, 2026)
+## 2. Agentic Retrieval (Public Preview as of Feb. 2, 2026)
 
 [Agentic retrieval in Azure AI Search](agentic_retrieval_overview) によると Agentic Retrieval とは次のようなことを指すようです。
 
@@ -72,7 +72,7 @@ Indexer を実行しても、Embeddings が Index に格納されない事象が
 > The expected type was 'Collection(Edm.Single)'.
 > ```
 > 
-> **他のスキルは動いていたのか**
+> **他のスキルは動いていたのか:**  
 > SplitSkill(テキスト分割)、WebApiSkill（タイトル抽出）は正常動作していた。  
 > Embeddingsのみが型変換エラーで失敗した。
 
@@ -99,10 +99,10 @@ GitHub Copilot も解を見いだせなかったため、Index に Embeddings �
 
 ## 4. 備忘録
 
-[!NOTE]
-TODO  
-[Create an indexed SharePoint knowledge source][agentic_sharepoint]
-2026.01.24 現在、Azure Portal から SPO のデータソースは作れないため、上記ドキュメントを参照しプログラムで作成する。[^1]
+> [!NOTE]
+> TODO  
+> [Create an indexed SharePoint knowledge source][agentic_sharepoint]
+> 2026.01.24 現在、Azure Portal から SPO のデータソースは作れないため、上記ドキュメントを参照しプログラムで作成する。[^1]
 
 [^1]:Azure AI Search は、Microsoft Foundry における `プロジェクト` 内で作成する `エージェント`([Foundry Agent Service][foundry_agent_service]) のナレッジを司る `Foundry IQ` の構成要素の１つとなり、Azure AI Search 内では SPO のデータソースを作れないが、Foundry IQ からは SPO のデータソース作成のUIもある。今後は KB 自体も Foundry 内で作るようになっていくのだろう。
 
