@@ -101,7 +101,7 @@ GitHub Copilot も解を見いだせなかったため、Index に Embeddings �
 
 > [!NOTE]
 > TODO  
-> [Create an indexed SharePoint knowledge source][agentic_sharepoint]
+> [Create an indexed SharePoint knowledge source][agentic_sharepoint]  
 > 2026.01.24 現在、Azure Portal から SPO のデータソースは作れないため、上記ドキュメントを参照しプログラムで作成する。[^1]
 
 [^1]:Azure AI Search は、Microsoft Foundry における `プロジェクト` 内で作成する `エージェント`([Foundry Agent Service][foundry_agent_service]) のナレッジを司る `Foundry IQ` の構成要素の１つとなり、Azure AI Search 内では SPO のデータソースを作れないが、Foundry IQ からは SPO のデータソース作成のUIもある。今後は KB 自体も Foundry 内で作るようになっていくのだろう。
